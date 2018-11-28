@@ -9,6 +9,6 @@
 on-done
 
 #传回来编辑信息
-editonInfo
+editorInfo
 
 
