@@ -1,0 +1,248 @@
+/* 编辑器样式 */
+#form_body {
+    color:  #333;
+}
+#form_body br {
+    line-height: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+#form_body table {
+    width: 100%;
+}
+#form_body h1,
+#form_body h2,
+#form_body h3,
+#form_body h4,
+#form_body h5,
+#form_body h6 {
+    margin: 10px 0;
+}
+#form_body p {
+    margin: 10px 0;
+}
+/* #form_body table[align="center"] {
+    margin: 0 auto;
+} */
+/* 重置样式 */
+#form_body input[type="radio"],
+#form_body input[type="checkbox"] {
+    cursor: pointer;
+}
+
+/* 表单模块公共样式 */
+.form-module {
+    display: inline-block;
+}
+.form-module.block {
+    display: block;
+}
+.form-module:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+/* 文本框 | 下拉菜单 | 多行文本框 */
+[module_type="text"] input,
+[module_type="date"] input,
+[module_type="select"] select,
+[module_type="radio"] .check-label-mount input,
+[module_type="checkbox"] .check-label-mount input {
+    height: 30px;
+}
+[module_type="text"] input,
+[module_type="date"] input,
+[module_type="textarea"] textarea,
+[module_type="select"] select,
+[module_type="radio"] .check-label-mount input,
+[module_type="checkbox"] .check-label-mount input {
+    padding: 0 5px;
+    border: 1px solid #D2D3D6;
+    outline: 0;
+    transition: all .3s ease-in-out;
+}
+
+[module_type="text"] input:focus,
+[module_type="date"] input:focus,
+[module_type="textarea"] textarea:focus,
+[module_type="select"] select:focus,
+[module_type="radio"] .check-label-mount input:focus,
+[module_type="checkbox"] .check-label-mount input:focus {
+    border-color: #4578ad;
+    box-shadow: 0 0 5px #4578ad;
+}
+
+/* 校验错误时 */
+.error[module_type="text"] input,
+.error[module_type="date"] input,
+.error[module_type="textarea"] textarea,
+.error[module_type="select"] select,
+.error[module_type="radio"] .check-label-mount input,
+.error[module_type="checkbox"] .check-label-mount input {
+    border-color: #ed3f14;
+}
+.error[module_type="text"] input:focus,
+.error[module_type="date"] input:focus,
+.error[module_type="textarea"] textarea:focus,
+.error[module_type="select"] select:focus,
+.error[module_type="radio"] .check-label-mount input:focus,
+.error[module_type="checkbox"] .check-label-mount input:focus {
+    border-color: #ed3f14;
+    box-shadow: 0 0 5px #ed3f14;
+}
+
+/* 无边框输入框 */
+[module_type="text"] input.no-border,
+[module_type="date"] input.no-border,
+[module_type="textarea"] textarea.no-border {
+    border-color: transparent;
+}
+[module_type="text"] input.no-border:focus,
+[module_type="date"] input.no-border:focus,
+[module_type="textarea"] textarea.no-border:focus{
+    border-color: #4578ad;
+    box-shadow: 0 0 5px #4578ad;
+}
+/* 单选 | 多选 */
+[module_type="radio"] .check-label,
+[module_type="checkbox"] .check-label {
+/*     display: inline-block; */
+    margin-right: 10px;
+    line-height: 42px;
+}
+[module_type="radio"] .check-label-mount,
+[module_type="checkbox"] .check-label-mount {
+    margin-left: 5px;
+}
+
+[module_type="radio"].block label,
+[module_type="checkbox"].block label {
+    width: 100%;
+    display:  block;
+}
+[module_type="radio"] label input,
+[module_type="checkbox"] label input {
+    margin-right: 5px;
+}
+
+/* 表格样式 */
+.data-table {
+    width: 100%;
+}
+.data-table tr th{
+    border-top: 1px solid #DDD !important;
+}
+.data-table tr th,
+.data-table tr td {
+    text-align: center;
+    vertical-align: middle;
+}
+/* 第一列文字居左 */
+.data-table.first-col-left tr th:first-child,
+.data-table.first-col-left tr td:first-child {
+    text-align: left;
+}
+/* 表格中的输入框 */
+.data-table input[type="text"] {
+    width: 100%;
+    height: 30px;
+    padding: 0 5px;
+    border: 1px solid #D2D3D6;
+    outline: 0;
+    transition: border .3s ease-in-out;
+}
+.data-table input[type="text"]:focus {
+    border-color: #4578ad;
+}
+.data-table.no-border input[type="text"] {
+    border-color: transparent;
+}
+.data-table.no-border input[type="text"]:focus {
+    border-color: #4578ad;
+}
+/* 自增表格按钮 */
+.data-table .table-diy-add {
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+}
+.data-table .table-diy-add:hover {
+    background-color: #f7f7f7;
+}
+.data-table .table-diy-add td {
+    padding: 0 !important;
+}
+
+/* 文件上传 */
+[module_type="file_upload"] .file-upload-btn {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    line-height: 1.5;
+    padding: 5px 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #4578ad;
+    border-color: #4578ad;
+}
+
+[module_type="file_upload"] .file-upload-info {
+    font-size: 14px;
+    color: #666;
+}
+
+/* 高级自增表格 */
+[module_type="table_diy_plus"] table .diy-plus-body:nth-child(even) {
+    background: #f7f7f7;
+}
+
+[module_type="table_diy_plus"] .diy-plus-actions .ivu-btn {
+    margin: 5px;
+}
+table td.diy-plus-actions {
+    width: 150px;
+    text-align: center;
+}
+
+/* 只读模块 */
+#form_body .readonly {
+    display: none;
+    font-weight: normal;
+}
+#form_body.form-readonly .readonly {
+    display: inline-block;
+}
+
+/* 校验错误提示 */
+#form_body .error-text {
+    display: none;
+    padding-top: 10px;
+    font-weight: normal;
+    color: #ed3f14;
+}
+/* 表单录入时可以看见 */
+#form_body.form-edit .error-text {
+    display: block;
+}
+/* 前后文字 */
+#form_body .before-text,
+#form_body .after-text {
+    white-space: nowrap;
+}
+#form_body .before-text {
+    padding-right: 5px;
+}
+#form_body .after-text {
+    padding-left: 5px;
+}

@@ -1,0 +1,108 @@
+/* 全局公共样式 包含对框架组件的重置 */
+
+// 公共变量 和函数
+@import '~common/scss/public/base-url';
+
+/* 基础公共 */
+
+.clear {
+    @include clear;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.text-center {
+    float: left;
+    text-align: center !important;
+}
+
+.omiss {
+    @include omiss;
+}
+
+// 公共容器
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.content {
+    margin: 20px auto;
+}
+
+
+/* 公共头部操作区域 */
+.admin-base-tools {
+    padding-bottom: 10px;
+    line-height: 35px;
+    @include clear;
+
+    .ivu-input-wrapper {
+        margin-right: 10px;
+        width: 300px;
+    } // 输入框尺寸
+    .ivu-input-xs {
+        width: 200px;
+    } // 文字
+    .admin-tools-label {
+        margin-right: 10px;
+        font-weight: normal;
+    } // 下拉菜单
+    .ivu-select {
+        margin-right: 15px;
+        width: auto;
+        .ivu-select-item {
+            @include omiss;
+        }
+    }
+
+    .admin-base-tools-left {
+        float: left;
+    }
+    .admin-base-tools-right {
+        float: right; // 按钮
+        .ivu-btn {
+            margin-left: 10px;
+            min-width: 80px;
+        }
+    }
+
+}
+
+/* 组件重置 */
+
+/* element-ui 表格 */
+.el-table {
+    // 默认不设置高度
+    &,
+    .el-table__body-wrapper {
+        // overflow: visible;
+    } // 表格头部和内容高度
+    th,
+    td {
+        height: 45px;
+    }
+}
+
+// 固定表头
+.table-fixed {
+    &,
+    .el-table__body-wrapper {
+        // overflow: auto;
+        padding-bottom:100px;
+    }
+}
+
+// 自定义表格大小
+.table-btn {
+    padding: 4px 15px;
+}
+
+/* 分页 */
+.base-page-menu {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}

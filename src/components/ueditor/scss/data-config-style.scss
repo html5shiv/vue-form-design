@@ -1,0 +1,51 @@
+// 表单配置页中的表单项目
+.form-item {
+    + .form-item {
+        margin-top: 10px;
+    }
+
+    .form-item-tit {
+        padding-bottom: 5px;
+        // 提示文号
+        .pop-icon {
+            width: 16px;
+            height: 16px;
+            color: #666;
+            cursor: pointer;
+        }
+
+        .ivu-checkbox-wrapper {
+            font-size: 14px;
+        }
+    }
+
+    .ivu-input-number.long {
+        width: 100%;
+    }
+}
+
+// 类似表格一样的布局
+.table-row {
+    position: relative;
+    display: table;
+    width: 100%;
+
+    + .table-row {
+        margin-top: 10px;
+    }
+
+    .table-col {
+        position: relative;
+        display: table-cell;
+
+        + .table-col {
+            padding-left: 5px;
+        }
+
+        // 去掉单选框和多选框的右边距 详见单选类型配置页
+        .ivu-radio-wrapper,
+        .ivu-checkbox-wrapper {
+            margin-right: 0;
+        }
+    }
+}
